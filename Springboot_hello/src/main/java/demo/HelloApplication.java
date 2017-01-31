@@ -18,7 +18,13 @@ public class HelloApplication {
 
   @RequestMapping("/hello")
   public String home() {
-    return "Hello World";
+    try {
+		Thread.sleep(500);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	} 
+	return "Hello World";
+
   }
 
   public static void main(String[] args) {
