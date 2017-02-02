@@ -29,7 +29,10 @@ RUN env GIT_SSL_NO_VERIFY=true git clone https://github.com/Tschuss/Netflix.git 
     cd Netflix/Springboot_hystrix-dashboard && \
     cd Netflix/Springboot_hello; mvn install
 
-# Standard SSH port
-EXPOSE 22 8761 8762 8765 7979
+ADD start.sh /start.sh && \
+    chmod 544 /start.sh
 
-CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-jar", "/Netflix/Springboot_eureka/target/eurekaApplication-0.0.1-SNAPSHOT.jar", "&"]
+# Standard SSH port
+EXPOSE 8761 8762 8765 7979
+
+CMD ["/start.sh"]
