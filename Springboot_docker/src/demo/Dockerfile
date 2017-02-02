@@ -24,15 +24,15 @@ RUN apt-get update && \
 
 #clonar Netflix from github https://github.com/Tschuss/Netflix.git
 RUN env GIT_SSL_NO_VERIFY=true git clone https://github.com/Tschuss/Netflix.git && \
-    cd Netflix/Springboot_eureka; mvn install && \ 
-    cd Netflix/Springboot_zuul; mvn install && \
-    cd Netflix/Springboot_hystrix-dashboard && \
-    cd Netflix/Springboot_hello; mvn install
+    cd /Netflix/Springboot_eureka; mvn install && \ 
+    cd /Netflix/Springboot_zuul; mvn install && \
+    cd /Netflix/Springboot_hystrix-dashboard; mvn install && \
+    cd /Netflix/Springboot_hello; mvn install
 
-ADD start.sh /start.sh && \
-    chmod 544 /start.sh
+ADD start.sh /
+RUN chmod 755 /start.sh
 
 # Standard SSH port
 EXPOSE 8761 8762 8765 7979
 
-CMD ["/start.sh"]
+CMD ["/bin/bash", "/start.sh"]
