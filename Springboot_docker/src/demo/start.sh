@@ -12,3 +12,5 @@ $JAVA_HOME/bin/java -jar /Netflix/Springboot_hystrix-dashboard/target/HystrixDas
 sleep 10
 echo start Hello
 $JAVA_HOME/bin/java -jar /Netflix/Springboot_hello/target/helloApplication-0.0.1-SNAPSHOT.jar
+echo FIN
+
