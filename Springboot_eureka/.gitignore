@@ -1,3 +1,5 @@
 /target/
 /bin/
 /dependency-reduced-pom.xml
+/.classth
+/.project
