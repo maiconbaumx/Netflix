@@ -1,1 +1,18 @@
-version: 2
+version: '2'
+services:
+  eureka:
+    build: ./eureka
+    ports:
+     - "8761:8761"
+  zuul:
+    build: ./zuul
+    ports:
+     - "8765:8765"
+  hystrix-dashboard:
+    build: ./hystrix-dashboard
+    ports:
+     - "7979:7979"
+  hello:
+    build: ./hello
+    ports:
+     - "8762:8762"
