@@ -2,17 +2,27 @@ version: '2'
 services:
   eureka:
     build: ./eureka
+    image: eureka_demo
     ports:
      - "8761:8761"
   zuul:
     build: ./zuul
+    depends_on:
+      - eureka
+    image: zuul_demo
     ports:
      - "8765:8765"
   hystrix-dashboard:
     build: ./hystrix-dashboard
+    depends_on:
+      - zuul
+    image: hystrixdashboard_demo
     ports:
      - "7979:7979"
   hello:
     build: ./hello
+    depends_on:
+      - zuul
+    image: hello_demo
     ports:
      - "8762:8762"
