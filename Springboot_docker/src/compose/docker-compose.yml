@@ -15,6 +15,7 @@ services:
     image: jiglesgom/zuul
     links:
       - eureka
+      - hello
     depends_on:
       - eureka
     ports:
@@ -26,6 +27,8 @@ services:
       - eureka
     links:
       - zuul
+      - eureka
+      - hello
     ports:
       - "7979:7979"
   hello:
@@ -35,5 +38,6 @@ services:
       - eureka
     links:
       - eureka
+      - zuul
     ports:
       - "8762:8762"
