@@ -13,6 +13,8 @@ services:
   zuul:
     build: ./zuul/
     image: jiglesgom/zuul
+    links:
+      - eureka
     depends_on:
       - eureka
     ports:
@@ -22,12 +24,16 @@ services:
     image: jiglesgom/hystrix-dashboard
     depends_on:
       - eureka
+    links:
+      - zuul
     ports:
       - "7979:7979"
   hello:
     build: ./hello/
     image: jiglesgom/hello
     depends_on:
+      - eureka
+    links:
       - eureka
     ports:
       - "8762:8762"
