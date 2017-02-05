@@ -8,7 +8,7 @@ RUN env GIT_SSL_NO_VERIFY=true git clone https://github.com/Tschuss/Netflix.git 
     cd /Netflix/Springboot_eureka; mvn install && \ 
 #    cd /Netflix/Springboot_zuul; mvn install && \
 #    cd /Netflix/Springboot_hystrix-dashboard; mvn install && \
-#    cd /Netflix/Springboot_hello; mvn install
+#    cd /Netflix/Springboot_hello; mvn install && \
     pwd
     
 #ADD start.sh /
@@ -18,4 +18,4 @@ RUN env GIT_SSL_NO_VERIFY=true git clone https://github.com/Tschuss/Netflix.git 
 EXPOSE 8761
 # 8762 8765 7979
 
-CMD ["$JAVA_HOME/bin/java", "-jar", "/Netflix/Springboot_eureka/target/eurekaApplication-0.0.1-SNAPSHOT.jar", "-Xmx128M"]
+CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-jar", "/Netflix/Springboot_eureka/target/eurekaApplication-0.0.1-SNAPSHOT.jar", "-Xmx128M"]
