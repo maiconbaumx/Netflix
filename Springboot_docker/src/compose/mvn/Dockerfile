@@ -24,3 +24,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists && \
     pwd
     
+CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-version"]

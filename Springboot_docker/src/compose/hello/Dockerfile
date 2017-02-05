@@ -18,4 +18,4 @@ RUN cd /Netflix/Springboot_hello; mvn install  && \
 EXPOSE 8762
 # 8762 8765 7979
 
-CMD ["$JAVA_HOME/bin/java", "-jar", "/Netflix/Springboot_hello/target/helloApplication-0.0.1-SNAPSHOT.jar", "-Xmx64M"]
+CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-jar", "/Netflix/Springboot_hello/target/helloApplication-0.0.1-SNAPSHOT.jar", "-Xmx64M"]

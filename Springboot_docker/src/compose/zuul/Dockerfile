@@ -18,4 +18,4 @@ RUN  cd /Netflix/Springboot_zuul; mvn install && \
 EXPOSE 8765
 # 8762 8765 7979
 
-CMD ["$JAVA_HOME/bin/java", "-jar", "/Netflix/Springboot_zuul/target/zuulApplication-0.0.1-SNAPSHOT.jar", "-Xmx128M"]
+CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-jar", "/Netflix/Springboot_zuul/target/zuulApplication-0.0.1-SNAPSHOT.jar", "-Xmx128M"]
