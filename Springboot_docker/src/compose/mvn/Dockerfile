@@ -1,7 +1,6 @@
 # Copyright 2016 Jiglesgom
 
 FROM ubuntu:trusty
-#MAINTAINER jiglesgom <jiglesgom@gmail.com>
 LABEL maintainer "jiglesgom@gmail.com"
 
 # Install Oracle Java 8
