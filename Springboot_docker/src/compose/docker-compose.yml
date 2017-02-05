@@ -38,6 +38,5 @@ services:
       - eureka
     links:
       - eureka
-      - zuul
     ports:
       - "8762:8762"
