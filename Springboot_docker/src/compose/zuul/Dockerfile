@@ -7,7 +7,7 @@ LABEL maintainer "jiglesgom@gmail.com"
 #RUN env GIT_SSL_NO_VERIFY=true git clone https://github.com/Tschuss/Netflix.git && \
 #    cd /Netflix/Springboot_eureka; mvn install && \ 
 WORKDIR /Netflix
-RUN env GIT_SSL_NO_VERIFY=true git pull
+RUN env GIT_SSL_NO_VERIFY=true git pull -b compose
 RUN  cd /Netflix/Springboot_zuul; mvn install && \
 #    cd /Netflix/Springboot_hystrix-dashboard; mvn install && \
 #    cd /Netflix/Springboot_hello; mvn install && \
