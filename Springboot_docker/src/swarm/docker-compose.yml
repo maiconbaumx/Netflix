@@ -3,7 +3,6 @@ services:
   mvn:
     image: jiglesgom/mvn
   eureka:
-    build: ./eureka/
     image: jiglesgom/eureka
     depends_on: 
       - mvn
