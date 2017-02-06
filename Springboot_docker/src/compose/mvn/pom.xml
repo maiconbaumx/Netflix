@@ -4,12 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>demo</groupId>
-	<artifactId>zuulApplication</artifactId>
+	<artifactId>caching</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
-	<name>Zuul demo</name>
-	<description>Zuul demo project</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -18,17 +14,11 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>demo.ZuulServerApplication</start-class>
-		<java.version>1.8</java.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
+		</dependency>		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
@@ -36,6 +26,19 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zuul</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
