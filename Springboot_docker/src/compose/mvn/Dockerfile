@@ -23,5 +23,9 @@ RUN apt-get update && \
     apt-get install -y --force-yes --no-install-recommends git && \
     rm -rf /var/lib/apt/lists && \
     pwd
+
+#genera el cache de todas las dependencias maven del springboot y NetflixOSS
+ADD pom.xml /
+RUN mvn verify clean --fail-never
     
-CMD ["/usr/lib/jvm/java-8-oracle/bin/java", "-version"]
+CMD ["mvn", "-version"]
