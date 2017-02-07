@@ -29,7 +29,6 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka:8761/eureka/
 
-    
 logging:
   level:
     ROOT: INFO
