@@ -1,37 +1,18 @@
 version: '3'
 services:
-  mvn:
-    image: jiglesgom/mvn
   eureka:
     image: jiglesgom/eureka
-    depends_on: 
-      - mvn
     ports:
       - "8761:8761"
   zuul:
     image: jiglesgom/zuul
-    links:
-      - eureka
-      - hello
-    depends_on:
-      - eureka
     ports:
       - "8765:8765"
   hystrix-dashboard:
     image: jiglesgom/hystrix-dashboard
-    depends_on:
-      - eureka
-    links:
-      - zuul
-      - eureka
-      - hello
     ports:
       - "7979:7979"
   hello:
     image: jiglesgom/hello
-    depends_on:
-      - eureka
-    links:
-      - eureka
     ports:
       - "8762:8762"
