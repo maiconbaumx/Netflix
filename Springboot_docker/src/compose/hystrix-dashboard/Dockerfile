@@ -1,6 +1,6 @@
 # Copyright 2016 Jiglesgom
 
-FROM jiglesgom/eureka
+FROM jiglesgom/mvn
 LABEL maintainer "jiglesgom@gmail.com"
 
 WORKDIR /Netflix/Springboot_hystrix-dashboard
