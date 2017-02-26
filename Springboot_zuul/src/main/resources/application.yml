@@ -22,14 +22,14 @@ server:
   port: 8765
 
 eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka/
     registerWithEureka: true
     fetchRegistry: true
     instance:
-      securePortEnabled: false  client:
-    serviceUrl:
-      defaultZone: http://eureka:8761/eureka/
+      securePortEnabled: false
 
-    
 logging:
   level:
     ROOT: INFO
