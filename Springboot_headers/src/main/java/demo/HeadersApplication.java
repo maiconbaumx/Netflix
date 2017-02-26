@@ -19,7 +19,7 @@ public class HeadersApplication {
   @RequestMapping("/headers")
   public String home(@RequestHeader MultiValueMap<String,String> headers) {
 
-	return headers.toString();
+	return "<pre>"+headers.toString().replaceAll("],","],\n")+"<\pre>";
   }
 
   public static void main(String[] args) {
