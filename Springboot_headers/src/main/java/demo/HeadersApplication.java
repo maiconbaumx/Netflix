@@ -16,7 +16,7 @@ import org.springframework.util.MultiValueMap;
 @RestController
 public class HeadersApplication {
 
-  @RequestMapping("/hello")
+  @RequestMapping("/headers")
   public String home(@RequestHeader MultiValueMap<String,String> headers) {
 
 	return headers.toString();
