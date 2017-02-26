@@ -3,6 +3,9 @@
 FROM jiglesgom/mvn
 LABEL maintainer "jiglesgom@gmail.com"
 
+#clonar Netflix from github https://github.com/Tschuss/Netflix.git
+RUN env GIT_SSL_NO_VERIFY=true git clone https://github.com/Tschuss/Netflix.git
+
 WORKDIR /Netflix/Springboot_hystrix-dashboard
 RUN env GIT_SSL_NO_VERIFY=true git pull
 RUN mvn install
