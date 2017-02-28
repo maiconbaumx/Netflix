@@ -1,5 +1,8 @@
 /target/
 /bin/
 /.project
+<<<<<<< HEAD
 /.classpath
+=======
+>>>>>>> branch 'master' of https://github.com/Tschuss/Netflix.git
 /.settings/

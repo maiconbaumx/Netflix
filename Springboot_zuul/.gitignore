@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 /bin/
 /target/
 /.settings/
 /.classpath
 /.project
+=======
+/dependency-reduced-pom.xml
+/target/
+/bin/
+/.classpth
+/.project
+/.settings/
+>>>>>>> branch 'master' of https://github.com/Tschuss/Netflix.git

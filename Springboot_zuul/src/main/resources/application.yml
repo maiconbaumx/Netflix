@@ -15,11 +15,21 @@ endpoints:
 
 zuul:
   routes:
+    headers: /headers/**
     hello: /hello/**
     zuul: /self/**
 
 server:
   port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka/,http://localhost:8761/eureka
+    registerWithEureka: true
+    fetchRegistry: true
+    instance:
+      securePortEnabled: false
 
 logging:
   level:
