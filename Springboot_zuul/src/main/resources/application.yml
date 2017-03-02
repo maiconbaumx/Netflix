@@ -25,7 +25,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:8761/eureka/,http://localhost:8761/eureka,http://jig-eureka-service.io.d.ip6n.net:8761/eureka
+      defaultZone: http://eureka:8761/eureka/,http://localhost:8761/eureka,http://jig-eureka.io.d.ip6n.net:8761/eureka
     registerWithEureka: true
     fetchRegistry: true
     instance:
